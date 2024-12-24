@@ -39,7 +39,10 @@
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
-            }
+            },
+            "allowedCommonJsDependencies": [
+    "@netlify/angular-runtime/context"
+  ]
           },
           "configurations": {
             "production": {
