@@ -1,0 +1,35 @@
+<div class="card">
+  <!-- Снег -->
+  <div class="snowflakes">
+    <div class="snowflake" *ngFor="let flake of snowflakes; trackBy: trackBySnowflake"></div>
+  </div>
+
+  <!-- Фейерверки -->
+  <div class="fireworks">
+    <div class="firework" *ngFor="let firework of fireworks"></div>
+  </div>
+
+  <!-- Текстовое поздравление -->
+  <div class="greeting shiny-text">
+    <h1>Frohe Weihnachten-Team, SelbstBoss!</h1>
+    <p>Ich wünsche Ihnen Freude und Wärme in dieser Weihnachtszeit!</p>
+  </div>
+
+  <!-- Ёлка -->
+  <div class="tree">
+    <div class="star"></div>
+    <div class="layer" *ngFor="let layer of treeLayers" [style.width]="layer.width"></div>
+    <div class="trunk"></div>
+    <div class="decorations">
+      <div
+        class="decoration"
+        *ngFor="let decor of decorations"
+        [style.backgroundColor]="decor.color"
+        [style.left]="decor.x"
+        [style.top]="decor.y"
+      ></div>
+    </div>
+  </div>
+</div>
+
+
